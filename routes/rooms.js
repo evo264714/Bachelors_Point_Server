@@ -484,7 +484,7 @@ r.get(
         meals,
         cost,
         deposit,
-        balance: deposit - cost,
+        balance: Math.round((deposit - cost) * 100) / 100,
       };
     });
     res.json({
